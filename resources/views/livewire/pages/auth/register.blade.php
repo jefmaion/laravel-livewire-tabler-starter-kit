@@ -37,7 +37,7 @@ new #[Layout('layouts.guest')] class extends Component
 }; ?>
 <div>
     <form wire:submit="register">
-        <h2 class="card-title text-center mb-4">Create new account</h2>
+        <h2 class="card-title text-center mb-4">{{ __('Create a new account') }}</h2>
         <!-- Name -->
         <div class="mb-3">
             <x-input-label for="name" :value="__('Name')" />
@@ -62,7 +62,7 @@ new #[Layout('layouts.guest')] class extends Component
             <x-text-input wire:model="password_confirmation" id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
-        
+
         <div class="form-footer">
             <button type="submit" class="btn btn-primary w-100">{{ __('Register') }}</button>
         </div>

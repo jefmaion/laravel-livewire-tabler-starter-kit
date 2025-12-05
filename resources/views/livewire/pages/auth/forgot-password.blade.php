@@ -37,9 +37,8 @@ new #[Layout('layouts.guest')] class extends Component
 }; ?>
 
 <div>
-    <h2 class="card-title text-center mb-4">Forgot password</h2>
-    <p class="text-secondary mb-4">{{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password
-        reset link that will allow you to choose a new one.') }}</p>
+    <h2 class="card-title text-center mb-4">{{ __('Forgot password') }}</h2>
+    <p class="text-secondary mb-4">{{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}</p>
 
         <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -58,7 +57,6 @@ new #[Layout('layouts.guest')] class extends Component
     </form>
 
     <x-slot:link>
-        <div class="text-center text-secondary mt-3">Forget it, <a href="{{ route('login') }}">send me back</a> to the sign in
-            screen.</div>
+        <div class="text-center text-secondary mt-3">{{ __('Forget it') }}, <a href="{{ route('login') }}">{{ __('Send me back') }}</a> {{ __('To the sign in screen.') }}</div>
     </x-slot:link>
 </div>

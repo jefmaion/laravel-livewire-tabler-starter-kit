@@ -3,7 +3,7 @@
         <div class="row g-2 align-items-center">
             <div class="col">
                 <!-- Page pre-title -->
-                <div class="page-pretitle">Welcome</div>
+                <div class="page-pretitle">{{ __('Welcome') }}</div>
                 <h2 class="page-title">{{ __('Dashboard') }}</h2>
             </div>
         </div>
@@ -14,5 +14,5 @@
             {{ __("You're logged in!") }}
         </div>
     </div>
-    
+
 </x-app-layout>

@@ -27,7 +27,7 @@ new #[Layout('layouts.guest')] class extends Component
 <div>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
-    <h2 class="h2 text-center mb-4">Login to your account</h2>
+    <h2 class="h2 text-center mb-4">{{ __('Login to your account') }}</h2>
     <form wire:submit="login">
         <!-- Email Address -->
         <div class="mb-3">
@@ -66,6 +66,6 @@ new #[Layout('layouts.guest')] class extends Component
     </form>
 
     <x-slot:link>
-        <div class="text-center text-secondary mt-3">Don't have account yet? <a href="{{ route('register') }}" tabindex="-1">Signup</a></div>
+        <div class="text-center text-secondary mt-3">{{ __("Don't have an account?") }} <a href="{{ route('register') }}" tabindex="-1">{{ __("Signup") }}</a></div>
     </x-slot:link>
 </div>

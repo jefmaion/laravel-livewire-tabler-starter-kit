@@ -13,18 +13,18 @@ new class extends Component
      */
     public function deleteUser(Logout $logout): void
     {
-        
+
         $this->validate([
             'password' => ['required', 'string', 'current_password'],
         ]);
 
- 
+
         tap(Auth::user(), $logout(...))->delete();
 
         $this->redirect('/', navigate: true);
     }
 
- 
+
 
 }; ?>
 {{--
@@ -90,8 +90,7 @@ new class extends Component
     <div class="card-body">
 
         <button type="button" class="btn btn-danger" wire:click="$dispatch('show-modal')">
-            {{ __('Delete
-            Account') }}
+            {{ __('Delete Account') }}
         </button>
 
         <div class="modal show" id="modal-delete-account" tabindex="-1" role="dialog" aria-hidden="true" wire:ignore.self>
@@ -115,11 +114,7 @@ new class extends Component
                             </svg>
                             <h3>{{ __('Are you sure you want to delete your account?') }}</h3>
                             <div class="text-secondary">
-                                {{ __('Once your account is deleted, all of its resources and
-                                data
-                                will be permanently deleted.
-                                Please enter your password to confirm you would like to permanently delete your
-                                account.') 
+                                {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.')
                                 }}
                             </div>
                             </div>

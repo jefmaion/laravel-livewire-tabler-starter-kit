@@ -24,5 +24,7 @@
     overflow-y: scroll;
   }
 </style>
-@yield('header')
 <script data-navigate-once src="{{ asset('template/dist/js/tabler.js') }}?{{ date('i') }}" defer></script>
+
+@yield('header')
+

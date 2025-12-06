@@ -64,7 +64,7 @@
                 </div>
             </div>
             @include('layouts.parts.settings')
-            <footer class="footer footer-transparent d-print-none">
+            @include('layouts.parts.footer')
                 <div class="container-xl">
                     <div class="row text-center align-items-center flex-row-reverse">
                         <div class="col-lg-auto ms-lg-auto">

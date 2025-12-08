@@ -5,7 +5,7 @@
     <title>COMBO {{ $title ?? 'Page Title' }}</title>
 </head>
 <body>
-    <script data-navigate-track src="{{ asset('template/dist/js/tabler-theme.min.js') }}?{{ date('i') }}" defer></script>
+    @include('layouts.parts.theme')
     <div class="page">
         <!--  BEGIN SIDEBAR  -->
         @include('layouts.parts.sidebar')

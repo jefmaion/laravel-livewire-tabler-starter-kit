@@ -5,8 +5,7 @@
     <title>{{ $title ?? 'Page Title' }}</title>
 </head>
 <body>
-    <script data-navigate-track>const themeConfig = @json(config('tabler.theme-config'));</script>
-    <script data-navigate-track src="{{ asset('js/tabler-theme-custom.js') }}"></script>
+    @include('layouts.parts.theme')
     <div class="page">
         <!--  BEGIN SIDEBAR  -->
         @include('layouts.parts.sidebar')

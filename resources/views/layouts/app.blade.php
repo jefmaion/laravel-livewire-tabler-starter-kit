@@ -6,8 +6,7 @@
 </head>
 
 <body>
-    <script data-navigate-track>const themeConfig = @json(config('tabler.theme-config'));</script>
-    <script data-navigate-track src="{{ asset('js/tabler-theme-custom.js') }}"></script>
+    @include('layouts.parts.theme')
     <div class="page">
         <!-- BEGIN NAVBAR  -->
         <livewire:layout.navigation />
@@ -23,7 +22,6 @@
                     {{ $slot }}
                 </div>
             </div>
-            @include('layouts.parts.settings')
             @include('layouts.parts.footer')
                 <div class="container-xl">
                     <div class="row text-center align-items-center flex-row-reverse">

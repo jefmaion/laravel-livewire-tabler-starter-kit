@@ -8,7 +8,7 @@ return [
         'theme'         => 'light', /** light, dark */
         'theme-base'    => 'stone', /** slate, gray, zinc, neutral, stone */
         'theme-font'    => 'sans-serif', /** sans-serif, serif, monospace, comic */
-        'theme-primary' => 'azure', /** blue, azure, indigo, purple, pink, red, orange, yellow, lime, green, teal,m cyan    */
+        'theme-primary' => 'purple', /** blue, azure, indigo, purple, pink, red, orange, yellow, lime, green, teal,m cyan    */
         'theme-radius'  => '0.5', /** 0, 0.5, 1, 1.5, 2 */
     ],
 

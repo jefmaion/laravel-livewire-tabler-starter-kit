@@ -9,7 +9,8 @@
         </div>
     </a>
     <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-        <a href="?theme=dark" class="dropdown-item hide-theme-dark" data-bs-toggle="tooltip" data-bs-placement="bottom" wire:navigate>
+        <a href="?theme=dark" class="dropdown-item hide-theme-dark" data-bs-toggle="tooltip" data-bs-placement="bottom"
+            wire:navigate>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="icon icon-1">
@@ -17,7 +18,8 @@
             </svg>
             Modo Dark
         </a>
-        <a href="?theme=light" class="dropdown-item hide-theme-light" data-bs-toggle="tooltip" data-bs-placement="bottom" wire:navigate>
+        <a href="?theme=light" class="dropdown-item hide-theme-light" data-bs-toggle="tooltip"
+            data-bs-placement="bottom" wire:navigate>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="icon icon-1">
@@ -27,11 +29,21 @@
             Modo Light
         </a>
         @if(!$slot->isEmpty())
-            <div class="dropdown-divider"></div>
-            {{ $slot }}
+        <div class="dropdown-divider"></div>
+        {{ $slot }}
         @endif
         <div class="dropdown-divider"></div>
-        <a href="#" wire:click="logout" class="dropdown-item">{{ __('Log Out') }}</a>
+        <a href="#" wire:click="logout" class="dropdown-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-1">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                <path d="M9 12h12l-3 -3" />
+                <path d="M18 15l3 -3" />
+            </svg>
+            {{ __('Log Out') }}
+        </a>
     </div>
 
 </div>

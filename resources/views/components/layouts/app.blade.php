@@ -8,7 +8,7 @@
     @include('layouts.parts.theme')
     <div class="page">
         <!--  BEGIN SIDEBAR  -->
-        @include('layouts.parts.sidebar')
+        <livewire:layout.sidebar />
         <!--  END SIDEBAR  -->
 
         <!-- BEGIN NAVBAR  -->

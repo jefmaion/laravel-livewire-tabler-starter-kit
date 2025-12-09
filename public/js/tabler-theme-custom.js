@@ -19,6 +19,7 @@
                 selectedValue = storedTheme ? storedTheme : themeConfig.theme;
             }
         }
+        
         document.documentElement.setAttribute('data-bs-' + key, selectedValue);
     }
 }));

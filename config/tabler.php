@@ -28,9 +28,7 @@ return [
             'icon'  => file_get_contents(resource_path('views/components/icons/profile.blade.php')),
         ],
 
-        'Aulas' => 'nav-header',
-
-        'Calendário' => [
+        'Menu Item 1' => [
             'route' => '',
             'icon'  => file_get_contents(resource_path('views/components/icons/home.blade.php')),
 
@@ -58,7 +56,7 @@ return [
             ],
         ],
 
-        'Menu Item 3' => [
+        'Menu Item 2' => [
             'route' => false,
             'icon'  => '',
         ],

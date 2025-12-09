@@ -44,11 +44,12 @@
         "setup": [
             "composer install",
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "@php -r \"$dir = strtolower(basename(getcwd())); $env = file_get_contents('.env'); $env = preg_replace('/^DB_DATABASE=.*/m', 'DB_DATABASE=laravel_' . $dir, $env); file_put_contents('.env', $env);\"",
+            "@php -r \"$dir = strtolower(basename(getcwd())); $default = 'laravel_' . $dir; $db = readline('Informe o nome do banco de dados (default: ' . $default . '): '); if(trim($db) === '') { $db = $default; } $env = file_get_contents('.env'); $env = preg_replace('/^DB_DATABASE=.*/m', 'DB_DATABASE=' . $db, $env); file_put_contents('.env', $env);\"",
             "@php artisan key:generate",
             "@php artisan migrate --force",
             "npm install",
-            "npm run build"
+            "npm run build",
+            "git remote remove origin || true"
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",

@@ -4,12 +4,20 @@ declare(strict_types = 1);
 
 namespace App\Livewire\Layout;
 
+use Illuminate\View\View;
 use Livewire\Component;
 
 class Sidebar extends Component
 {
-    public $sidebarMenu;
+    /**
+     * @var array<string, array<string, mixed>>
+     */
+    public array $sidebarMenu = [];
 
+    /**
+     * @param array<string, array<string, mixed>> $items
+     * @return array<string, array<string, mixed>>
+     */
     private function parse(array $items = []): array
     {
         foreach ($items as $title => &$item) {
@@ -32,14 +40,14 @@ class Sidebar extends Component
         return $items;
     }
 
-    public function mount()
+    public function mount(): void
     {
         $this->sidebarMenu = $this->parse(config('tabler.sidebar-menu'));
 
         // dd($this->sidebarMenu);
     }
 
-    public function render()
+    public function render(): View
     {
         return view('livewire.layout.sidebar');
     }

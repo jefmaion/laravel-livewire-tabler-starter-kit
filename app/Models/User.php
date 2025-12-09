@@ -5,6 +5,8 @@ declare(strict_types = 1);
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -13,7 +15,12 @@ use OwenIt\Auditing\Auditable as AuditingAuditable;
 use OwenIt\Auditing\Contracts\Auditable;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable implements Auditable
+/**
+ * App\Models\User
+ *
+ * @property string $short_name
+ */
+class User extends Authenticatable implements Auditable, MustVerifyEmail
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory;
@@ -55,6 +62,9 @@ class User extends Authenticatable implements Auditable
         ];
     }
 
+    /**
+     * @return Attribute<string, string>
+     */
     protected function shortName(): Attribute
     {
         return Attribute::make(
@@ -73,6 +83,9 @@ class User extends Authenticatable implements Auditable
         );
     }
 
+    /**
+     * @return Attribute<string, string>
+     */
     protected function initials(): Attribute
     {
         return Attribute::make(

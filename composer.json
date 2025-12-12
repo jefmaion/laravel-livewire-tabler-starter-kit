@@ -49,7 +49,12 @@
             "@php artisan migrate --force",
             "npm install",
             "npm run build",
-            "git remote remove origin || true"
+            "git remote remove origin || true",
+            "git remote add upstream https://github.com/jefmaion/laravel-livewire-tabler-starter-kit.git"
+        ],
+        "update-starter": [
+            "git fetch upstream",
+            "git merge upstream/main || true"
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
